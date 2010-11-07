@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nazwa:</b>
+  <%= @sprawdzian.nazwa %>
+</p>
+
+<p>
+  <b>Dzial:</b>
+  <%= @sprawdzian.dzial %>
+</p>
+
+<p>
+  <b>Klasa:</b>
+  <%= @sprawdzian.klasa %>
+</p>
+
+
+<%= link_to 'Edit', edit_sprawdzian_path(@sprawdzian) %> |
+<%= link_to 'Back', sprawdzians_path %>

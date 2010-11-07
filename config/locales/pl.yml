@@ -1,0 +1,13 @@
+pl:
+  hello: "Witaj świecie!"
+  download: "Pobierz"
+  show: "Pokaż"
+  edit: "Edytuj"
+  destroy: "Usuń"
+  new: "Utwórz nowy"
+  sprawdzians_list: "Lista sprawdzianów"
+  are_you_sure: "Jesteś pewna/pewien?"
+  name: "Nazwa"
+  department: "Dział"
+  class: "Klasa"
+  file: "Plik"

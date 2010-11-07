@@ -1,0 +1,33 @@
+<div id="main">
+<h1><%= t(:sprawdzians_list) %></h1>
+<p><i>Kliknij w nazwę kolumny, aby sortować wg niej</i></p>
+<hr />
+    <table id="sprawdziany">
+    <tr>
+        <th><%= sortable "nazwa", t(:name) %></th>
+        <th><%= sortable "dzial", t(:department) %></th>
+        <th><%= sortable "klasa",  t(:class) %></th>
+        <th><%= t(:file) %></th>
+        <!--<th></th>-->
+        <th></th>
+        <th></th>
+        <th>Data dodania</th>
+    </tr>
+
+    <% @sprawdzians.each do |s| %>
+    <tr>
+        <td><b><%= s.nazwa %></b></td>
+        <td><%= s.dzial %></td>
+        <td><%= s.klasa %></td>
+        <td><%= link_to t(:download), s.document.url %></td>
+        <!--<td><%= link_to t(:show), s %></td>-->
+        <td><%= link_to t(:edit), edit_sprawdzian_path(s) %></td>
+        <td><%= link_to t(:destroy), s, :confirm => t(:are_you_sure), :method => :delete %></td>
+        <td><%= s.updated_at.to_s(:db) %></td>
+        </tr>
+    <% end %>
+    </table>
+</div>
+<hr />
+
+<%= link_to  t(:new) + ' Sprawdzian', new_sprawdzian_path, :id => "new_button" %>

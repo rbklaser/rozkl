@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nazwa: "test1"
+  dzial: "roztwory"
+  klasa: "II"
+
+two:
+  nazwa: "test2"
+  dzial: "mole"
+  klasa: "I"
+  
+three:
+  nazwa: "Special one for searching, for special and III should find This one, second one and the fourth one"
+  dzial: "mole"
+  klasa: "I"
+
+four:
+  nazwa: "nothing particular"
+  dzial: "jakis"
+  klasa: "III"
