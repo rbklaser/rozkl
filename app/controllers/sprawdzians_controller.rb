@@ -4,8 +4,9 @@ class SprawdziansController < ApplicationController
   # GET /sprawdzians
   # GET /sprawdzians.xml
   def index
-    
-    @sprawdzians = Sprawdzian.order(sort_column + " " + sort_direction)
+    query = params[:search_query] ? params[:search_query] : ""
+    query = "%"+query+"%" 
+    @sprawdzians = Sprawdzian.where('nazwa LIKE ?', query).order(sort_column + " " + sort_direction).paginate :per_page => 1
 
 
     respond_to do |format|

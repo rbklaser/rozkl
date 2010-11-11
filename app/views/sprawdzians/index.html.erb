@@ -1,6 +1,13 @@
 <div id="main">
-<h1><%= t(:sprawdzians_list) %></h1>
+<h1><%= link_to t(:sprawdzians_list), Sprawdzian %></h1>
 <p><i>Kliknij w nazwę kolumny, aby sortować wg niej</i></p>
+
+
+<form action=''>
+<input name="search_query" type="text" />
+<input type='submit' value='Szukaj' />
+</form>
+
 <hr />
     <table id="sprawdziany">
     <tr>
@@ -27,6 +34,9 @@
         </tr>
     <% end %>
     </table>
+    <div id="pagination">
+		<%= will_paginate @sprawdzians %>
+	</div>
 </div>
 <hr />
 
