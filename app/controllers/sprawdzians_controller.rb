@@ -6,8 +6,7 @@ class SprawdziansController < ApplicationController
   def index
     query = params[:search_query] ? params[:search_query] : ""
     query = "%"+query+"%" 
-    @sprawdzians = Sprawdzian.where('nazwa LIKE ?', query).order(sort_column + " " + sort_direction).paginate :per_page => 1
-
+    @sprawdzians = Sprawdzian.where('nazwa LIKE ?', query).order(sort_column + " " + sort_direction).paginate :per_page => 1, :page => params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
